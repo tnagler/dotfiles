@@ -1,3 +1,7 @@
 [user]
 	name = tnagler
 	email = thomas.nagler@tum.de
+
+[url "ssh://git@github.com/"]                                                   
+    insteadOf = https://github.com/ 
+
