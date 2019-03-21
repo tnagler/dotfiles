@@ -1,5 +1,12 @@
 #!/bin/bash
+declare -a files=("init.vim" ".bashrc" ".functions.zsh" ".profile" 
+                  ".Renviron" ".valgrindrc" ".gitconfig" ".zshrc")
 
-for f in $(ls -d ~/dotfiles/*); do ln -s $f ~/; done
-for f in $(ls -d ~/dotfiles/.* | grep -v "git"); do ln -s $f ~/; done
-ln -s ~/dotfiles/.gitconfig ~/.gitconfig
+## now loop through the above array
+for file in "${files[@]}"
+do
+    rm -rf ~/$file
+    ln -s ~/dotfiles/$file ~/$file   
+   # or do whatever with individual element of the array
+done
+

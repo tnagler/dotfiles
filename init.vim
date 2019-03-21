@@ -27,7 +27,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 " Color theme
 Plug 'iCyMind/NeoSolarized'
-Plug 'joshdick/onedark'
+Plug 'joshdick/onedark.vim'
 
 " A tree explorer 
 Plug 'scrooloose/nerdtree'
@@ -83,6 +83,8 @@ call plug#end()
 " ============================================================================
 
 " Color theme 
+syntax on
+colorscheme onedark
 
 " Make it obvious where 80 characters is
 set textwidth=80
