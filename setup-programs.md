@@ -58,7 +58,7 @@ sudo apt install -y libcurl4-openssl-dev libssl-dev libxml2-dev  # for tidyverse
 sudo apt install -y libgsl-dev  # for VineCopula 
 
 ##### Python
-sudo apt install -y python3 python3-setuptools
+sudo apt install -y python3 python3-pip python3-setuptools
 
 #### Neovim
 sudo apt install -y neovim

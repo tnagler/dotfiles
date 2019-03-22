@@ -1,6 +1,7 @@
 #!/bin/bash
 declare -a files=("init.vim" ".bashrc" ".functions.zsh" ".profile" 
-                  ".Renviron" ".valgrindrc" ".gitconfig" ".zshrc")
+                  ".Renviron" ".valgrindrc" ".gitconfig" ".zshrc",
+                  ".R")
 
 ## now loop through the above array
 for file in "${files[@]}"
