@@ -57,8 +57,13 @@ sudo apt install -y r-base r-base-dev
 sudo apt install -y libcurl4-openssl-dev libssl-dev libxml2-dev  # for tidyverse packagews
 sudo apt install -y libgsl-dev  # for VineCopula 
 
-##### Python
+#### Python
 sudo apt install -y python3 python3-pip python3-setuptools
+pip3 install wheel
+pip3 install --user neovim
+pip3 install pynvim
+pip3 install unidecode
+pip3 install jedi
 
 #### Neovim
 sudo apt install -y neovim
@@ -67,7 +72,6 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 mkdir -p ~/.config/nvim
 ln -nfs ~/dotfiles/init.vim ~/.config/nvim/init.vim
 nvim +PlugInstall
-
 
 ## Misc -----------------
 
@@ -81,4 +85,8 @@ sudo apt install -y fonts-open-sans
 ## Symlinks ------------
 
 ln -s /data/music-current/ ~/Desktop/music-current
+ln -s /data/dev/ ~/dev
+ln -s /data/teaching/ ~/teaching
+ln -s /data/papers/ ~/papers
+ln -s /data/research/ ~/research
 
