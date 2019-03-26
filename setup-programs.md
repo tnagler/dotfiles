@@ -73,6 +73,9 @@ mkdir -p ~/.config/nvim
 ln -nfs ~/dotfiles/init.vim ~/.config/nvim/init.vim
 nvim +PlugInstall
 
+#### Web
+sudo apt install -y hugo
+
 ## Misc -----------------
 
 #### TeX

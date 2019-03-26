@@ -90,7 +90,7 @@ colorscheme onedark
 " Make it obvious where 80 characters is
 set textwidth=80
 set colorcolumn=+0
-set formatoptions-=t " remove if you want auto-wrap
+set formatoptions+=t " remove if you want auto-wrap
 
 " Softtabs, 2 spaces
 set tabstop=2
