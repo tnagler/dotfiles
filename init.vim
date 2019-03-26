@@ -49,6 +49,7 @@ Plug 'tpope/vim-fugitive'
 
 " Latex
 Plug 'vim-latex/vim-latex'
+Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 
 " R
 Plug 'jalvesaq/Nvim-R'
@@ -181,6 +182,9 @@ tnoremap <Esc> <C-\><C-n>
 " To simulate |i_CTRL-R| in terminal-mode
 tnoremap <expr> <C-R> '<C-\><C-N>"'.nr2char(getchar()).'pi'
 
+" To clean up most syntax highlighting problems
+noremap <F12> <Esc>:syntax sync fromstart<CR>
+inoremap <F12> <C-o>:syntax sync fromstart<CR>
 " ============================================================================
 " ======== NERDTree
 " ============================================================================
