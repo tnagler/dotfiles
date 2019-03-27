@@ -1,6 +1,6 @@
-!/bin/bash
+#!/bin/bash
 declare -a files=("init.vim" ".bashrc" ".functions.zsh" ".profile" 
-                  ".valgrindrc" ".gitconfig" ".zshrc",
+                  ".valgrindrc" ".gitconfig" ".zshrc"
                   ".R")
 
 ## now loop through the above array
