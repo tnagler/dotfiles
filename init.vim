@@ -71,7 +71,7 @@ Plug 'ncm2/ncm2-bufword'
 Plug 'ncm2/ncm2-path'
 Plug 'ncm2/ncm2-pyclang'
 Plug 'ncm2/ncm2-jedi'
-Plug 'gaalcaras/ncm-R'
+" Plug 'gaalcaras/ncm-R'
 
 " Asynchronous linting/fixing
 Plug 'w0rp/ale'

@@ -1,3 +1,5 @@
+#!/bin/bash
+
 ## Upgrade default install ----------
 
 sudo apt update
@@ -47,7 +49,7 @@ chsh -s /bin/zsh
 
 #### C++
 sudo apt install -y build-essential
-sudo apt install -y libclang-dev clang clang-tools
+sudo apt install -y libclang-dev clang clang-tools-7
 sudo apt install -y cmake
 sudo apt install -y libboost-dev libeigen3-dev 
 
