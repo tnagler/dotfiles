@@ -51,7 +51,7 @@ chsh -s /bin/zsh
 sudo apt install -y build-essential
 sudo apt install -y libclang-dev clang clang-tools-7
 sudo update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-7 100
-sudo apt install -y cmake
+sudo apt install -y cmake doxygen graphviz
 sudo apt install -y libboost-dev libeigen3-dev 
 
 
