@@ -335,3 +335,8 @@ let g:ale_fixers = {
       \   'cpp': ['clang-format', 'remove_trailing_lines', 'trim_whitespace'],
       \}
 
+map <c-l> <c-w><
+map <c-h> <c-w>>
+map <c-j> <c-w>+
+map <c-k> <c-w>-
+map <c-g> <c-w>=
