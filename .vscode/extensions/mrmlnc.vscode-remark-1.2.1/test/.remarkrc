@@ -1,0 +1,15 @@
+{
+	"plugins": [
+		"first-heading",
+		"github"
+	],
+	"settings": {
+		"closeAtx": true
+	},
+	"github": {
+		"repository": "https://github.com/mrmlnc/vscode-remark"
+	},
+	"first-heading": {
+		"heading": "Hello, .remarkrc file!"
+	}
+}
