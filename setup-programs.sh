@@ -65,19 +65,6 @@ sudo apt install -y xorg libx11-dev libglu1-mesa-dev libfreetype6-dev # for rgl
 
 #### Python
 sudo apt install -y python3 python3-pip python3-setuptools
-pip3 install wheel
-pip3 install --user neovim
-pip3 install pynvim
-pip3 install unidecode
-pip3 install jedi
-
-#### Neovim
-sudo apt install -y neovim
-curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-mkdir -p ~/.config/nvim
-ln -nfs ~/dotfiles/init.vim ~/.config/nvim/init.vim
-nvim +PlugInstall
 
 #### Web
 sudo apt install -y hugo
