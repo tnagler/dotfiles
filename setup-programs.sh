@@ -18,12 +18,6 @@ sudo apt install -y google-chrome-stable
 #### Chat
 sudo apt install -y skypeforlinux telegram-desktop
 
-#### Todoist
-TEMP_DEB="$(mktemp)"
-wget -O "$TEMP_DEB" 'https://github.com/KryDos/todoist-linux/releases/download/1.15/Todoist.deb'
-sudo dpkg -i "$TEMP_DEB"
-rm -f "$TEMP_DEB"
-
 #### Git
 sudo apt install -y git
 ssh-keygen -t rsa -b 4096 -C "mail@tnagler.com"
@@ -49,22 +43,23 @@ chsh -s /bin/zsh
 
 #### C++
 sudo apt install -y build-essential
-sudo apt install -y libclang-dev clang clang-tools-7
-sudo update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-7 100
+sudo apt install -y libclang-dev clang clang-tools-10
+sudo update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-10 100
 sudo apt install -y cmake doxygen graphviz
 sudo apt install -y libboost-dev libeigen3-dev 
 
 
 #### R
-sudo add-apt-repository -y ppa:marutter/rrutter3.5
+sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/'
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
 sudo apt update
-sudo apt install -y r-base r-base-dev
-sudo apt install -y libcurl4-openssl-dev libssl-dev libxml2-dev  # for tidyverse packagews
-sudo apt install -y libgsl-dev  # for VineCopula 
-sudo apt install -y xorg libx11-dev libglu1-mesa-dev libfreetype6-dev # for rgl
+gpg -a --export E298A3A825C0D65DFD57CBB651716619E084DAB9 | sudo apt-key add -
+sudo apt install r-base r-base-core r-recommended r-base-dev
 
 #### Python
 sudo apt install -y python3 python3-pip python3-setuptools
+pip3 install wheel
+
 
 #### Web
 sudo apt install -y hugo
@@ -85,4 +80,15 @@ ln -s /data/dev/ ~/dev
 ln -s /data/teaching/ ~/teaching
 ln -s /data/papers/ ~/papers
 ln -s /data/research/ ~/research
+
+## usb driver
+
+git clone git@github.com:cilynx/rtl88x2bu.git
+cd rtl88x2bu
+VER=$(sed -n 's/\PACKAGE_VERSION="\(.*\)"/\1/p' dkms.conf)
+sudo rsync -rvhP ./ /usr/src/rtl88x2bu-${VER}
+sudo dkms add -m rtl88x2bu -v ${VER}
+sudo dkms build -m rtl88x2bu -v ${VER}
+sudo dkms install -m rtl88x2bu -v ${VER}
+sudo modprobe 88x2bu
 
