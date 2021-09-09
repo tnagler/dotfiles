@@ -43,18 +43,18 @@ chsh -s /bin/zsh
 
 #### C++
 sudo apt install -y build-essential
-sudo apt install -y libclang-dev clang clang-tools-10
-sudo update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-10 100
+sudo apt install -y libclang-12-dev clang-12 clang-tools-12
+sudo update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-12 100
 sudo apt install -y cmake doxygen graphviz
 sudo apt install -y libboost-dev libeigen3-dev 
 
 
 #### R
-sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/'
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
-sudo apt update
-gpg -a --export E298A3A825C0D65DFD57CBB651716619E084DAB9 | sudo apt-key add -
-sudo apt install r-base r-base-core r-recommended r-base-dev
+apt update -qq
+apt install --no-install-recommends software-properties-common dirmngr
+wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | sudo tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc
+add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran40/"
+
 
 #### Python
 sudo apt install -y python3 python3-pip python3-setuptools
