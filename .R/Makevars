@@ -1,2 +1,13 @@
-PKG_CXXFLAGS += -Wno-ignored-attributes
+CXXFLAGS+=-Wno-ignored-attributes -Wno-nonnull -O3
+CXX11FLAGS+=-Wno-ignored-attributes -O3 # -Wc++17-attribute-extensions
+CXX14FLAGS+=-Wno-ignored-attributes -Wno-nonnull -O3
+CXX17FLAGS+=-Wno-ignored-attributes -Wno-nonnull -O3
 
+
+# CXX11=clang++-16
+# CXX=g++-12
+# CXX14=g++-12
+# CXX17=g++-12
+# CXX14FLAGS += -Wbitwise-instead-of-logical
+# CXX11FLAGS += -Wbitwise-instead-of-logical
+# CXXFLAGS += -Wbitwise-instead-of-logical

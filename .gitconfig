@@ -7,3 +7,5 @@
 
 [credential]
 	helper = cache
+[init]
+	templatedir = /home/n5/.git-templates
